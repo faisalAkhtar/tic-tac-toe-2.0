@@ -1,26 +1,14 @@
 import "../styles/Stat.css"
 
-const Stat = ({winner, isXplaying, isGameEnd}) => {
-  return (
-    <>
-      <h1 className="stat">
-        {
-          {
-            'x': "x wins!!",
-            'o': "o wins!!",
-            '-': "it's a draw!!"
-          }[winner]
-        }
-      </h1>
+const Stat = ({isXplaying, winner}) => {
+  const status = winner
+               ? 'Winner: ' + winner
+               : 'Next player: ' + (isXplaying ? 'X' : 'O');
 
-      {
-        !isGameEnd ? (
-          <p className="stat">
-            {isXplaying ? "X chance" : "O chance"}
-          </p>
-        ) : <></>
-      }
-    </>
+  return (
+    <h1 className="stat">
+      {status}
+    </h1>
   )
 };
 

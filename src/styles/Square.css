@@ -30,3 +30,7 @@
 .square:focus {
   outline: none;
 }
+
+.square.last {
+  color: #888888;
+}

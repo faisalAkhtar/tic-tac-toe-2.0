@@ -1,13 +1,14 @@
 import "../styles/Board.css"
 import Square from "./Square";
 
-const Board = ({squares, isGameEnd, handleClick}) => {
+const Board = ({squares, lastXMove, lastOMove, handleClick}) => {
   return (
     <div className="board">
       {squares.map((val, ind) =>
         <Square
           value={val}
-          handleClick={() => isGameEnd ? null : handleClick(ind)}
+          lastMove = {ind === lastOMove || ind === lastXMove}
+          handleClick={() => handleClick(ind)}
           key={ind}
         />
       )}
