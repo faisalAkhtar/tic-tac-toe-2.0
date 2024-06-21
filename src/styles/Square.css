@@ -1,0 +1,32 @@
+.square {
+  font-family: Permanent Marker;
+  background: #10151b;
+  color: #ffffff;
+  border: none;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 100px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  padding: 0;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  border-left: 3px solid #c0c0c0;
+  border-top: 3px solid #c0c0c0;
+}
+
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3) {
+  border-top: none;
+}
+
+.square:nth-child(3n+1) {
+  border-left: none;
+}
+
+.square:focus {
+  outline: none;
+}
