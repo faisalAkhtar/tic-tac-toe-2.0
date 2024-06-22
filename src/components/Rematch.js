@@ -5,7 +5,7 @@ const Rematch = ({isGameEnd, handleClick}) => {
       <button className="rematch" onClick={handleClick}>
         Rematch
       </button>
-    ) : (<></>);
+    ) : (<div className="rematch" />);
 };
 
 export default Rematch;

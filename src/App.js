@@ -42,16 +42,17 @@ function App() {
   }
 
   return (
-    <>
+    <div>
       <Stat winner={winner} isXplaying={isXplaying} />
       <Board
         squares={squares}
         lastXMove={xMoves.length < 3 ? -1 : xMoves[0]}
         lastOMove={oMoves.length < 3 ? -1 : oMoves[0]}
         handleClick={markSquare}
+        winner={winner}
       />
       <Rematch isGameEnd={winner} handleClick={resetBoard} />
-    </>
+    </div>
   );
 }
 

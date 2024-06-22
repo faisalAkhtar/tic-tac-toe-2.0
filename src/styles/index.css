@@ -1,14 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Playwrite+RO:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font: 42px "Permanent Marker", sans-serif;
+  font-family: 'Playwrite RO', cursive;
   margin: 0;
   background: #10151b;
   color: #c0c0c0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: max(100vh,500px);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }

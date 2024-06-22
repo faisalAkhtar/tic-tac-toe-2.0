@@ -1,9 +1,9 @@
 import "../styles/Board.css"
 import Square from "./Square";
 
-const Board = ({squares, lastXMove, lastOMove, handleClick}) => {
+const Board = ({squares, lastXMove, lastOMove, handleClick, winner}) => {
   return (
-    <div className="board">
+    <div className={winner ? "board end" : "board"}>
       {squares.map((val, ind) =>
         <Square
           value={val}
