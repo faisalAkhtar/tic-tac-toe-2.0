@@ -11,18 +11,22 @@ const checkWinner = (xMoves, oMoves) => {
   ];
 
   const isWinner = (moves) => {
-    return lines.some((line) => line.every((index) => moves.includes(index)));
+    return lines.some((line) => line.every((index) => moves.includes(index)))
   };
 
-  if (isWinner(xMoves)) {
-    return 'X';
-  }
-
-  if (isWinner(oMoves)) {
-    return 'O';
-  }
-
+  if (isWinner(xMoves)) return 'X';
+  if (isWinner(oMoves)) return 'O';
   return null;
 };
 
-export { checkWinner };
+const updateMoves = (moves, ind, squares) => {
+  const newMoves = [...moves, ind];
+  if (newMoves.length > 3) {
+    const [lastMove, ...rest] = newMoves;
+    squares[lastMove] = null;
+    return rest;
+  }
+  return newMoves;
+}
+
+export { checkWinner, updateMoves };
